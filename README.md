@@ -30,12 +30,12 @@ pip install -r requirements.txt
 from google_scholar import GoogleScholarUser
 
 if __name__ == '__main__':
-	user_id = # The Google Scholar ID of the user you want to scrape
+	user_id =  # The Google Scholar ID of the user you want to scrape
 	# To retrieve this user_id, visit the profile of the user.
 	# The user=xxxxxxxx part in the URL is the user_id you need.
 
 	scraper = GoogleScholarUser(user_id)
-	scraper.getScholarArticles()
+	scraper.get_scholar_articles()
 
 ```
 
@@ -43,6 +43,5 @@ As of now, the articles are stored under `scraper.articles` variable. All the ar
 
 ```python
 for article in scraper.articles:
-	print(article.text) # Prints only the text part remove HTML tags
-	
+	print(article.text)  # Prints only the text part remove HTML tags
 ```
